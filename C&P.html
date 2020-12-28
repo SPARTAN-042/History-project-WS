@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Histoire</title>
+
+</head>
+
+<body>
+    <div class="head">
+        <div class="headerobjectswrapper">
+
+            <header>Anglian Times</header>
+        </div>
+
+        <div class="subhead">
+            <div id="clockbox"></div>
+
+            <script type="text/javascript">
+                var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                function GetClock() {
+                    var d = new Date();
+                    var nday = d.getDay(),
+                        nmonth = d.getMonth(),
+                        ndate = d.getDate(),
+                        nyear = d.getFullYear();
+                    var nhour = d.getHours(),
+                        nmin = d.getMinutes(),
+                        nsec = d.getSeconds(),
+                        ap;
+
+                    if (nhour == 0) {
+                        ap = " AM";
+                        nhour = 12;
+                    } else if (nhour < 12) {
+                        ap = " AM";
+                    } else if (nhour == 12) {
+                        ap = " PM";
+                    } else if (nhour > 12) {
+                        ap = " PM";
+                        nhour -= 12;
+                    }
+
+                    if (nmin <= 9) nmin = "0" + nmin;
+                    if (nsec <= 9) nsec = "0" + nsec;
+
+                    var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                    document.getElementById('clockbox').innerHTML = clocktext;
+                }
+
+                GetClock();
+                setInterval(GetClock, 1000);
+            </script>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-3 shadow-sm sticky-top">
+        <div class="container">
+            <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link hvr-push hvr-fade" href="home.html" style="margin-left: 250px;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 1</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item active" href="C&P.html">Crime and Punishment</a>
+                            <a class="dropdown-item" href="#">Whitechapel</a>
+                        </div>
+                    </li>
+
+                    <div id="navbarContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                            <!-- Level one dropdown -->
+                            <li class="nav-item dropdown">
+                                <a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle hvr-push hvr-fade">Paper 2</a>
+                                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
+
+                                    <!-- Level two dropdown-->
+                                    <li class="dropdown-submenu">
+                                        <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section A</a>
+                                        <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                            <li>
+                                                <a tabindex="-1" href="#" class="dropdown-item">Superpower relations and the Cold War</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section B</a>
+                                        <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                            <li>
+                                                <a tabindex="-1" href="#" class="dropdown-item">Anglo-Saxons and Norman England</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 3</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Weimar Germany</a>
+                        </div>
+                    </li>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link hvr-push hvr-fade" href="index.html">IDK</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link hvr-push hvr-fade" href="glossary.html">Glossary</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+
+    </nav>
+    <div class="toight">
+        <div>
+            <div class="row">
+                <div class="col-6">
+                    <figure>
+                        <img src="https://aprilmunday.files.wordpress.com/2017/12/medieval-violence.jpg?w=500" style="margin: 40px; margin-bottom: unset; margin-left: 60px;" width="515px" height="375" class="img-fluid" alt="Responsive image">
+                        <figcaption>Medieval Tithings - Catching a criminal</figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-6">
+                    <div class="content">
+
+                        <div class="text">
+                            <div class="head">
+                                <span class="headline hl3">1000-1066 Anglo-Saxon England</span>
+                                <p><span class="headline hl4">Crime and Punishment during the Anglo-Saxon period</span></p>
+                            </div>
+                            <h3 class="LE">Law Enforcement</h3>
+                            <p>Community for the Anglo-Saxons was important especially for the reason that they did not have an established police force, this ment that the Saxons would have to rely on the community to deal with criminals. The Saxons' strategy
+                                for law enforcement was to introduce <em><strong>'Tithings'</strong></em>, these were small groups of 10 men that were collectively responsible for each other and the capture of criminals.<em> The Church</em> also played
+                                a significant role in law enforcement, it help in determining the accused as guilty or not, the Church had an overarching amount of power in society at the time and specifically with the <em><strong>Trials by Ordeal</strong></em>,
+                                these were not <em>punishments</em> but instead a way for the community to determine one's innocence. </p>
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="collumn">
+                    <div class="head"><span class="headline hl5">How Criminals are Caught</span>
+                        <p><span class="headline hl6">Caption</span></p>
+                    </div>
+                    <p>When a crime was commited a <a class="hac" href="#">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly consisting
+                        of of men from the village who knew both the accuser and the accused. The accuser and the accused would give their version of events and it was up to the jury to decide who was telling the truth. If there was no clear evidence
+                        such as an eyewitness to the crime, the jury decided guilt or innocence based on their knowledge of the people concerned. If the jury felt that the accuser was more honest than the accused, they would swear an oath that the accused
+                        was guilty. This oath taking was called <strong><em>compurgation.</em></strong> </p>
+
+
+                    <p></p>
+
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="collumn">
+                    <div class="head"><span class="headline hl1">Heading3</span>
+                        <p><span class="headline hl2">Caption</span></p>
+                    </div>
+                    <p>Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
+
+                    <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class="citation">"Don't under&shy;estimate the Force. I suggest you try it again, Luke."</span> This time, let go your conscious self
+                        and act on instinct. In my experience, there is no such thing as luck. You're all clear, kid. Let's blow this thing and go home!</p>
+                    <p>You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you refer to will soon be back in our hands. As you wish.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="https://images2.alphacoders.com/434/thumb-1920-434500.jpg" class="img-fluid" style="padding-right: 8px;" alt="Responsive image">
+            </div>
+        </div>
+
+        <div class="collumn">
+            <div class="head"><span class="headline hl3">Heading4</span>
+                <p><span class="headline hl4">Caption</span></p>
+            </div>
+            <p>
+            </p>
+        </div>
+
+
+        <div id="clockbox"></div>
+
+
+
+
+
+        <script type="text/javascript">
+            var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            function GetClock() {
+                var d = new Date();
+                var nday = d.getDay(),
+                    nmonth = d.getMonth(),
+                    ndate = d.getDate(),
+                    nyear = d.getFullYear();
+                var nhour = d.getHours(),
+                    nmin = d.getMinutes(),
+                    nsec = d.getSeconds(),
+                    ap;
+
+                if (nhour == 0) {
+                    ap = " AM";
+                    nhour = 12;
+                } else if (nhour < 12) {
+                    ap = " AM";
+                } else if (nhour == 12) {
+                    ap = " PM";
+                } else if (nhour > 12) {
+                    ap = " PM";
+                    nhour -= 12;
+                }
+
+                if (nmin <= 9) nmin = "0" + nmin;
+                if (nsec <= 9) nsec = "0" + nsec;
+
+                var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                document.getElementById('clockbox').innerHTML = clocktext;
+            }
+
+            GetClock();
+            setInterval(GetClock, 1000);
+        </script>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
+        <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = 'https://weatherwidget.io/js/widget.min.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'weatherwidget-io-js');
+        </script>
+
+        <script>
+            $(function() {
+                // ------------------------------------------------------- //
+                // Multi Level dropdowns
+                // ------------------------------------------------------ //
+                $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    $(this).siblings().toggleClass("show");
+
+
+                    if (!$(this).next().hasClass('show')) {
+                        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                    }
+                    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                        $('.dropdown-submenu .show').removeClass("show");
+                    });
+
+                });
+            });
+        </script>
+
+        <script>
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+    </div>
+
+
+
+</body>
+
+
+</html>
