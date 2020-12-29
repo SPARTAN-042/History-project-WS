@@ -1,25 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 html {
     overflow: hidden!important;
     height: 100%!important;
 }
 
 body {
-    font-family: 'Droid Serif', serif;
+    font-family: 'rubik', sans-serif;
     font-size: 14px;
     color: #2f2f2f;
     background-color: seashell;
-    font-weight: 700;
+    font-weight: 500;
     height: 100%!important;
     overflow: auto!important;
-}
-
-body p {
-    font-family: 'Roboto', sans-serif;
 }
 
 .toight {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#clockbox {
+    font-weight: bold;
 }
 
 
@@ -102,6 +103,7 @@ p {
 }
 
 .subhead {
+    font-family: Arial, Helvetica, sans-serif !important;
     text-transform: uppercase;
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
@@ -318,20 +320,29 @@ content {
 
 /*___Main Body____________________________________________________________________________________________________________________*/
 
-.LE {
+.topic-head {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 42px;
+    text-transform: unset;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    text-align: center;
     text-decoration: underline;
 }
 
 figure {
-    border: 1px #cccccc solid;
+    border: 3px #cccccc solid;
     padding: 4px;
     margin-bottom: 10px;
 }
 
 figcaption {
+    font-family: Arial, Helvetica, sans-serif !important;
     background-color: black;
     color: white;
-    font-style: italic;
+    font-style: normal;
     padding: 2px;
     text-align: center;
 }
@@ -339,6 +350,10 @@ figcaption {
 .pic {
     margin: 20px;
     margin-left: 60px;
+}
+
+.divider {
+    border-top: 3px solid;
 }
 
 

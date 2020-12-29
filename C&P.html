@@ -148,18 +148,17 @@
                         <figcaption>Medieval Tithings - Catching a criminal</figcaption>
                     </figure>
                 </div>
-
                 <div class="col-6">
                     <div class="content">
-
                         <div class="text">
                             <div class="head">
                                 <span class="headline hl3">1000-1066 Anglo-Saxon England</span>
-
+                                <hr class="divider">
                                 <p><span class="headline hl4">Crime and Punishment during the Anglo-Saxon period</span></p>
                             </div>
-                            <h3 class="LE">Law Enforcement</h3>
-                            <p>Community for the Anglo-Saxons was important especially for the reason that they did not have an established police force, this ment that the Saxons would have to rely on the community to deal with criminals. The Saxons' strategy
+                            <h3 class="topic-head">Law Enforcement</h3>
+                            <br>
+                            <p>Community for the Anglo-Saxons was important especially for the reason that they did not have an established police force, this meant that the Saxons would have to rely on the community to deal with criminals. The Saxons' strategy
                                 for law enforcement was to introduce <em><strong>'Tithings'</strong></em>, these were small groups of 10 men that were collectively responsible for each other and the capture of criminals.<em> The Church</em> also played
                                 a significant role in law enforcement, it help in determining the accused as guilty or not, the Church had an overarching amount of power in society at the time and specifically with the <em><strong>Trials by Ordeal</strong></em>,
                                 these were not <em>punishments</em> but instead a way for the community to determine one's innocence. </p>
@@ -173,10 +172,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="collumn">
-                    <div class="head"><span class="headline hl5">How Criminals are Caught</span>
-                        <p><span class="headline hl6">Caption</span></p>
-                    </div>
-                    <p>When a crime was commited a <a class="hac" href="#">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly consisting
+                    <h3 class="topic-head">How Criminals are Caught</h3>
+                    <p>When a crime was committed a <a class="hac" href="#">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly consisting
                         of of men from the village who knew both the accuser and the accused. The accuser and the accused would give their version of events and it was up to the jury to decide who was telling the truth. If there was no clear evidence
                         such as an eyewitness to the crime, the jury decided guilt or innocence based on their knowledge of the people concerned. If the jury felt that the accuser was more honest than the accused, they would swear an oath that the accused
                         was guilty. This oath taking was called <strong><em>compurgation.</em></strong> </p>
@@ -192,9 +189,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="collumn">
-                    <div class="head"><span class="headline hl1">Heading3</span>
-                        <p><span class="headline hl2">Caption</span></p>
-                    </div>
+                    <h3 class="topic-head">Heading3</h3>
                     <p>Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
 
                     <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class="citation">"Don't under&shy;estimate the Force. I suggest you try it again, Luke."</span> This time, let go your conscious self
@@ -208,105 +203,105 @@
         </div>
 
         <div class="collumn">
-            <div class="head"><span class="headline hl3">Heading4</span>
-                <p><span class="headline hl4">Caption</span></p>
-            </div>
-            <p>
-            </p>
+            <h3 class="topic-head">Heading4</h3>
         </div>
-
-
-        <div id="clockbox"></div>
-
-
-
-
-
-        <script type="text/javascript">
-            var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-            function GetClock() {
-                var d = new Date();
-                var nday = d.getDay(),
-                    nmonth = d.getMonth(),
-                    ndate = d.getDate(),
-                    nyear = d.getFullYear();
-                var nhour = d.getHours(),
-                    nmin = d.getMinutes(),
-                    nsec = d.getSeconds(),
-                    ap;
-
-                if (nhour == 0) {
-                    ap = " AM";
-                    nhour = 12;
-                } else if (nhour < 12) {
-                    ap = " AM";
-                } else if (nhour == 12) {
-                    ap = " PM";
-                } else if (nhour > 12) {
-                    ap = " PM";
-                    nhour -= 12;
-                }
-
-                if (nmin <= 9) nmin = "0" + nmin;
-                if (nsec <= 9) nsec = "0" + nsec;
-
-                var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-                document.getElementById('clockbox').innerHTML = clocktext;
-            }
-
-            GetClock();
-            setInterval(GetClock, 1000);
-        </script>
-        <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
-        <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = 'https://weatherwidget.io/js/widget.min.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'weatherwidget-io-js');
-        </script>
-
-        <script>
-            $(function() {
-                // ------------------------------------------------------- //
-                // Multi Level dropdowns
-                // ------------------------------------------------------ //
-                $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    $(this).siblings().toggleClass("show");
-
-
-                    if (!$(this).next().hasClass('show')) {
-                        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-                    }
-                    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-                        $('.dropdown-submenu .show').removeClass("show");
-                    });
-
-                });
-            });
-        </script>
-
-        <script>
-            // Used to toggle the menu on small screens when clicking on the menu button
-            function myFunction() {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-        </script>
+        <p>
+        </p>
     </div>
+
+
+    <div id="clockbox"></div>
+
+
+
+
+
+    <script type="text/javascript">
+        var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        function GetClock() {
+            var d = new Date();
+            var nday = d.getDay(),
+                nmonth = d.getMonth(),
+                ndate = d.getDate(),
+                nyear = d.getFullYear();
+            var nhour = d.getHours(),
+                nmin = d.getMinutes(),
+                nsec = d.getSeconds(),
+                ap;
+
+            if (nhour == 0) {
+                ap = " AM";
+                nhour = 12;
+            } else if (nhour < 12) {
+                ap = " AM";
+            } else if (nhour == 12) {
+                ap = " PM";
+            } else if (nhour > 12) {
+                ap = " PM";
+                nhour -= 12;
+            }
+
+            if (nmin <= 9) nmin = "0" + nmin;
+            if (nsec <= 9) nsec = "0" + nsec;
+
+            var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+            document.getElementById('clockbox').innerHTML = clocktext;
+        }
+
+        GetClock();
+        setInterval(GetClock, 1000);
+    </script>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
+    <script>
+        ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://weatherwidget.io/js/widget.min.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'weatherwidget-io-js');
+    </script>
+
+    <script>
+        $(function() {
+            // ------------------------------------------------------- //
+            // Multi Level dropdowns
+            // ------------------------------------------------------ //
+            $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                $(this).siblings().toggleClass("show");
+
+
+                if (!$(this).next().hasClass('show')) {
+                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                }
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                    $('.dropdown-submenu .show').removeClass("show");
+                });
+
+            });
+        });
+    </script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    </div>
+
 
 
 
