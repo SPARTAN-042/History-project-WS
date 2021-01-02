@@ -8,15 +8,25 @@ body {
     font-family: 'rubik', sans-serif;
     font-size: 14px;
     color: #2f2f2f;
-    background-color: seashell;
+    background-color: antiquewhite;
     font-weight: 500;
     height: 100%!important;
     overflow: auto!important;
 }
 
+.head {
+    background-color: white !important;
+}
+
 .toight {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 65px;
+    margin-right: 65px;
+    background-color: white;
+}
+
+.toighter {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #clockbox {
@@ -302,7 +312,7 @@ content {
 }
 
 .collumn .figure {
-    margin: 0 0 20px;
+    margin: unset;
 }
 
 .collumn .figcaption {
@@ -332,28 +342,50 @@ content {
     text-decoration: underline;
 }
 
-figure {
-    border: 3px #cccccc solid;
-    padding: 4px;
-    margin-bottom: 10px;
-}
-
-figcaption {
-    font-family: Arial, Helvetica, sans-serif !important;
-    background-color: black;
-    color: white;
-    font-style: normal;
-    padding: 2px;
-    text-align: center;
-}
-
-.pic {
-    margin: 20px;
-    margin-left: 60px;
-}
-
 .divider {
     border-top: 3px solid;
+}
+
+.caption {
+    font-family: Arial, Helvetica, sans-serif !important;
+    background-color: unset;
+    color: unset;
+    font-style: normal;
+    text-align: center;
+    width: 505px;
+    font-weight: bold;
+}
+
+.caption:after {
+    content: "";
+    /* This is necessary for the pseudo element to work. */
+    display: block;
+    /* This will put the pseudo element on its own line. */
+    margin: 0 auto;
+    /* This will center the border. */
+    width: 50%;
+    /* Change this to whatever width you want. */
+    padding-top: 2px;
+    /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black;
+    /* This creates the border. Replace black with whatever color you want. */
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 
