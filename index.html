@@ -14,302 +14,213 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Histoire</title>
+    <style>
+        /* Make the image fully responsive */
+        
+        .carousel-inner img {
+            width: 1000px;
+            height: 500px;
+            margin-left: 175px;
+            border-style: solid;
+            border-width: thick;
+        }
+        
+        .carousel-control-prev {
+            margin-left: 100px;
+        }
+        
+        .carousel-control-next {
+            margin-right: 100px;
+        }
+        
+        .carousel-caption {
+            color: gray!important;
+            font-weight: bolder!important;
+        }
+        
+        .carousel-title {
+            color: gray;
+            font-weight: bolder!important;
+        }
+    </style>
 
 </head>
-
-<body>
-    <div class="head">
-        <div class="headerobjectswrapper">
-
-            <header>Anglian Times</header>
-        </div>
-
-        <div class="subhead">
-            <div id="clockbox"></div>
-
-            <script type="text/javascript">
-                var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-                function GetClock() {
-                    var d = new Date();
-                    var nday = d.getDay(),
-                        nmonth = d.getMonth(),
-                        ndate = d.getDate(),
-                        nyear = d.getFullYear();
-                    var nhour = d.getHours(),
-                        nmin = d.getMinutes(),
-                        nsec = d.getSeconds(),
-                        ap;
-
-                    if (nhour == 0) {
-                        ap = " AM";
-                        nhour = 12;
-                    } else if (nhour < 12) {
-                        ap = " AM";
-                    } else if (nhour == 12) {
-                        ap = " PM";
-                    } else if (nhour > 12) {
-                        ap = " PM";
-                        nhour -= 12;
-                    }
-
-                    if (nmin <= 9) nmin = "0" + nmin;
-                    if (nsec <= 9) nsec = "0" + nsec;
-
-                    var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-                    document.getElementById('clockbox').innerHTML = clocktext;
-                }
-
-                GetClock();
-                setInterval(GetClock, 1000);
-            </script>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-3 shadow-sm sticky-top">
-        <div class="container">
-            <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hvr-push hvr-fade" href="home.html" style="margin-left: 250px;">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 1</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="C&P.html">Crime and Punishment</a>
-                            <a class="dropdown-item" href="#">Whitechapel</a>
-                        </div>
-                    </li>
-
-                    <div id="navbarContent" class="collapse navbar-collapse">
-                        <ul class="navbar-nav mr-auto">
-                            <!-- Level one dropdown -->
-                            <li class="nav-item dropdown">
-                                <a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle hvr-push hvr-fade">Paper 2</a>
-                                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
-
-                                    <!-- Level two dropdown-->
-                                    <li class="dropdown-submenu">
-                                        <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section A</a>
-                                        <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
-                                            <li>
-                                                <a tabindex="-1" href="#" class="dropdown-item">Superpower relations and the Cold War</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section B</a>
-                                        <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
-                                            <li>
-                                                <a tabindex="-1" href="#" class="dropdown-item">Anglo-Saxons and Norman England</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-3 shadow-sm sticky-top">
+    <div class="container">
+        <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link hvr-push hvr-fade" href="index.html" style="margin-left: 250px;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 1</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="C&P.html">Crime and Punishment</a>
+                        <a class="dropdown-item" href="#">Whitechapel</a>
                     </div>
+                </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 3</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Weimar Germany</a>
-                        </div>
-                    </li>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link hvr-push hvr-fade" href="index.html">IDK</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link hvr-push hvr-fade" href="glossary.html">Glossary</a>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
+                <div id="navbarContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Level one dropdown -->
+                        <li class="nav-item dropdown">
+                            <a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle hvr-push hvr-fade">Paper 2</a>
+                            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
 
-            <div class="col-md-8 bg-color-three-reasons section-column">
-                <div class="row">
-                    <div class="col">
-
-    </nav>
-    <div>
-        <div class="row">
-            <div class="col-6">
-                <img src="https://images2.alphacoders.com/434/thumb-1920-434500.jpg" class="img-fluid" alt="Responsive image">
-            </div>
-
-            <div class="col-6">
-                <div class="content">
-
-                    <div class="text">
-                        <div class="head">
-                            <span class="headline hl3">Heading1</span>
-                            <p><span class="headline hl4">Caption</span></p>
-                        </div>
-                        <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among
-                            the tall grass by the trickling stream;</p>
-                        <p>and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I
-                            feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads
-                            my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that
-                            is living so full and warm within me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God!</p>
-                    </div>
-
+                                <!-- Level two dropdown-->
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section A</a>
+                                    <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                        <li>
+                                            <a tabindex="-1" href="#" class="dropdown-item">Superpower relations and the Cold War</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Section B</a>
+                                    <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                        <li>
+                                            <a tabindex="-1" href="#" class="dropdown-item">Anglo-Saxons and Norman England</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="collumn">
-                <div class="head"><span class="headline hl5">Heading2</span>
-                    <p><span class="headline hl6">Caption</span></p>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hvr-push hvr-fade" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper 3</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Weimar Germany</a>
+                    </div>
+                </li>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link hvr-push hvr-fade" href="idk.html">IDK</a>
+                        </li>
+                    </ul>
                 </div>
-                <p>The sunset faded to twilight before anything further happened. The crowd far away on the left, towards Woking, seemed to grow, and I heard now a faint murmur from it. The little knot of people towards Chobham dispersed. There was scarcely
-                    an intimation of movement from the pit.</p>
-
-
-                <p>It was this, as much as anything, that gave people courage, and I suppose the new arrivals from Woking also helped to restore confidence. At any rate, as the dusk came on a slow, intermittent movement upon the sand pits began, a movement
-                    that seemed to gather force as the stillness of the evening about the cylinder remained unbroken. Vertical black figures in twos and threes would advance, stop, watch, and advance again, spreading out as they did so in a thin irregular
-                    crescent that promised to enclose the pit in its attenuated horns. I, too, on my side began to move towards the pit.</p>
-
-                <p>Then I saw some cabmen and others had walked boldly into the sand pits, and heard the clatter of hoofs and the gride of wheels. I saw a lad trundling off the barrow of apples. And then, within thirty yards of the pit, advancing from the
-                    direction of Horsell, I noted a little black knot of men, the foremost of whom was waving a white flag.</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <div class="collumn">
-                <div class="head"><span class="headline hl1">Heading3</span>
-                    <p><span class="headline hl2">Caption</span></p>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link hvr-push hvr-fade" href="glossary.html">Glossary</a>
+                        </li>
+                    </ul>
                 </div>
-                <p>Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
+        </div>
 
-                <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class="citation">"Don't under&shy;estimate the Force. I suggest you try it again, Luke."</span> This time, let go your conscious self
-                    and act on instinct. In my experience, there is no such thing as luck. You're all clear, kid. Let's blow this thing and go home!</p>
-                <p>You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you refer to will soon be back in our hands. As you wish.</p>
+        <div class="col-md-8 bg-color-three-reasons section-column">
+            <div class="row">
+                <div class="col">
+
+</nav>
+
+
+
+<br>
+
+
+
+<!-- First Grid -->
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/images/ColdWar.jpg" alt="coldwar" width="700" height="500">
+            <div class="carousel-caption">
+                <h3 class="carousel-title">Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
             </div>
         </div>
-        <div class="col-6">
-            <img src="https://images2.alphacoders.com/434/thumb-1920-434500.jpg" class="img-fluid" style="padding-right: 8px;" alt="Responsive image">
+        <div class="carousel-item">
+            <img src="assets/images/Tapestry_Harold.jpg" alt="Chicago" width="700" height="500">
+            <div class="carousel-caption">
+                <h3 class="carousel-title">Senlac Hill - 1066 AD</h3>
+                <p>Death of Harold Godwinson at the Battle of Hastings</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/" alt="New York" width="700" height="500">
+            <div class="carousel-caption">
+                <h3 class="carousel-title">New York</h3>
+                <p>We love the Big Apple!</p>
+            </div>
         </div>
     </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
 
-    <div class="collumn">
-        <div class="head"><span class="headline hl3">Heading4</span>
-            <p><span class="headline hl4">Caption</span></p>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+
+
+        <div class="w3-twothird">
+            <h1>Lorem Ipsum</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the
-            impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when
-            I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
-        </p>
     </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<script>
+    $(function() {
+        // ------------------------------------------------------- //
+        // Multi Level dropdowns
+        // ------------------------------------------------------ //
+        $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            $(this).siblings().toggleClass("show");
 
 
-    <div id="clockbox"></div>
-
-
-
-
-
-    <script type="text/javascript">
-        var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        function GetClock() {
-            var d = new Date();
-            var nday = d.getDay(),
-                nmonth = d.getMonth(),
-                ndate = d.getDate(),
-                nyear = d.getFullYear();
-            var nhour = d.getHours(),
-                nmin = d.getMinutes(),
-                nsec = d.getSeconds(),
-                ap;
-
-            if (nhour == 0) {
-                ap = " AM";
-                nhour = 12;
-            } else if (nhour < 12) {
-                ap = " AM";
-            } else if (nhour == 12) {
-                ap = " PM";
-            } else if (nhour > 12) {
-                ap = " PM";
-                nhour -= 12;
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
             }
-
-            if (nmin <= 9) nmin = "0" + nmin;
-            if (nsec <= 9) nsec = "0" + nsec;
-
-            var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-            document.getElementById('clockbox').innerHTML = clocktext;
-        }
-
-        GetClock();
-        setInterval(GetClock, 1000);
-    </script>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
-    <script>
-        ! function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://weatherwidget.io/js/widget.min.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, 'script', 'weatherwidget-io-js');
-    </script>
-
-    <script>
-        $(function() {
-            // ------------------------------------------------------- //
-            // Multi Level dropdowns
-            // ------------------------------------------------------ //
-            $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                $(this).siblings().toggleClass("show");
-
-
-                if (!$(this).next().hasClass('show')) {
-                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-                }
-                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-                    $('.dropdown-submenu .show').removeClass("show");
-                });
-
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass("show");
             });
+
         });
-    </script>
+    });
+</script>
 
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
         }
-    </script>
-
-
+    }
+</script>
 
 
 </body>
-
 
 </html>
