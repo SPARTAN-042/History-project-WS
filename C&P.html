@@ -14,6 +14,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Histoire</title>
+    <style>
+         :target {
+            background-color: crimson;
+            color: white;
+            font-weight: 500;
+        }
+    </style>
 
 </head>
 
@@ -171,17 +178,17 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="text">
-                        <div class="collumn">
+                    <div class="collumn">
+                        <div class="text">
                             <h3 class="topic-head">How Criminals were Caught</h3>
-                            <p>When a crime was committed a <a class="hac" href="#">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly
+                            <p>When a crime was committed a <a href="glossary.html#hac">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly
                                 consisting of men from the village who knew both the accuser and the accused. The accuser and the accused would give their version of events and it was up to the jury to decide who was telling the truth. If there was no
                                 clear evidence such as an eyewitness to the crime, the jury decided guilt or innocence based on their knowledge of the people concerned. If the jury felt that the accuser was more honest than the accused, they would swear
                                 an oath that the accused was guilty. This oath taking was called <strong><em>compurgation.</em></strong></p>
 
-                            <p>However, if the jury could not come to an agreement, a <a class="tbo" href="#">Trial by Ordeal</a> would be carried out, and if found guilty they would be punished by a court, and in most cases the most common method of punishment
-                                was <a class="wrgd" href="#">Wergild</a>.</p>
-
+                            <p>However, if the jury could not come to an agreement, a <a href="glossary.html#tbo">Trial by Ordeal</a> would be carried out, and if found guilty they would be punished by a court, and in most cases the most common method of
+                                punishment was
+                                <a href="glossary.html#wrgd">Wergild</a>.</p>
                             <p></p>
 
                         </div>
@@ -215,7 +222,7 @@
                                 </tr>
                                 <tr>
                                     <td>Trial by Blessed Bread</td>
-                                    <td>an accused priest would be required to take the wafer of communion. If they were guilty, the accused clergy member was expected to choke on the sacrament, and if innocent they would swallow it without incident.</td>
+                                    <td>An accused priest would be required to take the wafer of communion. If they were guilty, the accused clergy member was expected to choke on the sacrament, and if innocent they would swallow it without incident.</td>
                                 </tr>
                                 <tr>
 
@@ -226,10 +233,6 @@
 
                                 </tr>
                             </table>
-                            <p></p>
-
-                            <p></p>
-                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -240,108 +243,137 @@
                     </div>
                 </div>
             </div>
-
-            <div class="collumn">
-                <h3 class="topic-head">Heading4</h3>
-            </div>
-            <p>
-            </p>
-
-
-            <div id="clockbox"></div>
-
-
-
-
-
-            <script type="text/javascript">
-                var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-                function GetClock() {
-                    var d = new Date();
-                    var nday = d.getDay(),
-                        nmonth = d.getMonth(),
-                        ndate = d.getDate(),
-                        nyear = d.getFullYear();
-                    var nhour = d.getHours(),
-                        nmin = d.getMinutes(),
-                        nsec = d.getSeconds(),
-                        ap;
-
-                    if (nhour == 0) {
-                        ap = " AM";
-                        nhour = 12;
-                    } else if (nhour < 12) {
-                        ap = " AM";
-                    } else if (nhour == 12) {
-                        ap = " PM";
-                    } else if (nhour > 12) {
-                        ap = " PM";
-                        nhour -= 12;
-                    }
-
-                    if (nmin <= 9) nmin = "0" + nmin;
-                    if (nsec <= 9) nsec = "0" + nsec;
-
-                    var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-                    document.getElementById('clockbox').innerHTML = clocktext;
-                }
-
-                GetClock();
-                setInterval(GetClock, 1000);
-            </script>
-            <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
-            <script>
-                ! function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = 'https://weatherwidget.io/js/widget.min.js';
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, 'script', 'weatherwidget-io-js');
-            </script>
-
-            <script>
-                $(function() {
-                    // ------------------------------------------------------- //
-                    // Multi Level dropdowns
-                    // ------------------------------------------------------ //
-                    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-
-                        $(this).siblings().toggleClass("show");
+            <div class="row">
+                <div class="col-12">
+                    <div class="collumn">
+                        <div class="text">
+                            <div class="wnl-align">
+                                <h3 class="topic-head" style="margin: auto;">William's New Laws</h3>
+                            </div>
+                            <p style="margin-top: 30px;">
+                                Not long after William's claim to the English Throne, did he and his men start a castle building project - William utilised Saxon peasants to construct these fortresses for Norman lords. These castles represented power and authority, as well as being
+                                used to keep an eye on people.
+                            </p>
+                            <p>
+                                The feudal system had been used in France by the Normans from the time they first settled there in about 900AD. It was a simple, but effective system, where all land was owned by the King. One quarter was kept by the King as his personal property, some
+                                was given to the church and the rest was leased out under strict controls, this feudal system was introduced to England following the invasion. This system continued to fortify William's control over england by providing
+                                him, theoretically, absolute power.
+                            </p>
+                            <p>
+                                Proceeding the establishment of new laws, the <strong>Murdrum</strong> fine, a derivative of the <em>Werglid</em>, but was used in the situation were a Norman was murdered by an Anglo-Saxon, this meant that if the killer
+                                wasn't caught the murdrum would be issued to the
+                                <a href="glossary.html#hund">hundred</a> where the body was found.
+                            </p>
+                            <p>
+                                William declared that large stretches of the English countryside to be <em>'Royal Forests'</em> which he and the wealthy would use for hunting. Land which had been common land was now controlled by the king. Although for
+                                peasants it was illegal to hunt, carry weapons or cut down trees - some of the harshest punishment were for breaking these Forest Laws.
+                            </p>
+                            <p>
+                                Any man aged 14 and over, who tried to avoid trial and punishment by running away from his community was declared an outlaw. Women were said to be 'waived'. These outlaws or waived women lost the protection of the law. They could be killed without any
+                                legal consequences
+                            </p>
+                            <p>
+                                Fines were now used to deal with lesser crimes, although the money no longer went to the victims family, instead it went toward the King's treasury.
+                            </p>
+                            <p>
+                                William I set up the Church Courts to deal with moral crimes, strengthening the importance of the church, its strength also increased along with the more common use of oaths and trial by ordeal as the technique of determining guilt or innocence.
+                            </p>
+                            <p>
+                                Norman-French became the the official language of court proceedings and records were in Latin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
-                        if (!$(this).next().hasClass('show')) {
-                            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                <div id="clockbox"></div>
+
+                <script type="text/javascript">
+                    var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                    function GetClock() {
+                        var d = new Date();
+                        var nday = d.getDay(),
+                            nmonth = d.getMonth(),
+                            ndate = d.getDate(),
+                            nyear = d.getFullYear();
+                        var nhour = d.getHours(),
+                            nmin = d.getMinutes(),
+                            nsec = d.getSeconds(),
+                            ap;
+
+                        if (nhour == 0) {
+                            ap = " AM";
+                            nhour = 12;
+                        } else if (nhour < 12) {
+                            ap = " AM";
+                        } else if (nhour == 12) {
+                            ap = " PM";
+                        } else if (nhour > 12) {
+                            ap = " PM";
+                            nhour -= 12;
                         }
-                        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-                            $('.dropdown-submenu .show').removeClass("show");
-                        });
 
-                    });
-                });
-            </script>
+                        if (nmin <= 9) nmin = "0" + nmin;
+                        if (nsec <= 9) nsec = "0" + nsec;
 
-            <script>
-                // Used to toggle the menu on small screens when clicking on the menu button
-                function myFunction() {
-                    var x = document.getElementById("navDemo");
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
+                        var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                        document.getElementById('clockbox').innerHTML = clocktext;
                     }
-                }
-            </script>
+
+                    GetClock();
+                    setInterval(GetClock, 1000);
+                </script>
+                <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
+                <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = 'https://weatherwidget.io/js/widget.min.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'weatherwidget-io-js');
+                </script>
+
+                <script>
+                    $(function() {
+                        // ------------------------------------------------------- //
+                        // Multi Level dropdowns
+                        // ------------------------------------------------------ //
+                        $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            $(this).siblings().toggleClass("show");
+
+
+                            if (!$(this).next().hasClass('show')) {
+                                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                            }
+                            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                                $('.dropdown-submenu .show').removeClass("show");
+                            });
+
+                        });
+                    });
+                </script>
+
+                <script>
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                        var x = document.getElementById("navDemo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
+            </div>
         </div>
-    </div>
-
-
 
 
 </body>

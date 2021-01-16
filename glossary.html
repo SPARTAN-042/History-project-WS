@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://discord.com/api/guilds/745719286869524600/widget.json"></script>
     <title>Histoire</title>
+    <style>
+         :target {
+            background-color: crimson;
+            color: white;
+            font-weight: 500;
+        }
+    </style>
 
 </head>
 
@@ -135,108 +142,90 @@
                         </ul>
                     </div>
             </div>
-
-            <div class="col-md-8 bg-color-three-reasons section-column">
-                <div class="row">
-                    <div class="col">
-
     </nav>
 
-    <iframe src="https://discord.com/widget?id=745719286869524600&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    <div id="clockbox"></div>
+
+
+    <div class="toight">
+        <div class="toighter">
+            <div class="row">
+                <div class="col-4">
+                    <div class="glossary-text">
+                        <dl>
+                            <div id="hac">
+                                <dt>Hue and Cry</dt>
+                                <dd>A loud cry calling for the pursuit and capture of a criminal.</dd>
+                            </div>
+                            <div id="tbo">
+                                <dt>Trial by Ordeal</dt>
+                                <dd>A primitive means used to determine guilt or innocence by submitting the accused to dangerous or painful tests believed to be under supernatural control ordeal by fire ordeal by water.</dd>
+                            </div>
+                            <div id="wrgd">
+                                <dt>Wergild</dt>
+                                <dd>Compensation paid to the victims of crime or to their families in the case of one's death or injury.</dd>
+                            </div>
+                            <div id="hund">
+                                <dt>Hundred</dt>
+                                <dd>The division of a shire for administrative, military and judicial purposes under the common law.</dd>
+                            </div>
+                            <div id="will">
+                                <dt>William of Normandy</dt>
+                                <dd>the illegitimate son of Duke Robert I of Normandy, and Herleve (also known as Arlette), daughter of a tanner in Falaise. Known as 'William the Bastard' to his contemporaries</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="glossary-text">
+                        <dl>
+                            <dt>Title</dt>
+                            <dd>Description</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="clockbox"></div>
 
 
 
+            <script>
+                $(function() {
+                    // ------------------------------------------------------- //
+                    // Multi Level dropdowns
+                    // ------------------------------------------------------ //
+                    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        $(this).siblings().toggleClass("show");
 
 
-    <script type="text/javascript">
-        var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        if (!$(this).next().hasClass('show')) {
+                            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                        }
+                        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                            $('.dropdown-submenu .show').removeClass("show");
+                        });
 
-        function GetClock() {
-            var d = new Date();
-            var nday = d.getDay(),
-                nmonth = d.getMonth(),
-                ndate = d.getDate(),
-                nyear = d.getFullYear();
-            var nhour = d.getHours(),
-                nmin = d.getMinutes(),
-                nsec = d.getSeconds(),
-                ap;
-
-            if (nhour == 0) {
-                ap = " AM";
-                nhour = 12;
-            } else if (nhour < 12) {
-                ap = " AM";
-            } else if (nhour == 12) {
-                ap = " PM";
-            } else if (nhour > 12) {
-                ap = " PM";
-                nhour -= 12;
-            }
-
-            if (nmin <= 9) nmin = "0" + nmin;
-            if (nsec <= 9) nsec = "0" + nsec;
-
-            var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-            document.getElementById('clockbox').innerHTML = clocktext;
-        }
-
-        GetClock();
-        setInterval(GetClock, 1000);
-    </script>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
-    <script>
-        ! function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://weatherwidget.io/js/widget.min.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, 'script', 'weatherwidget-io-js');
-    </script>
-
-    <script>
-        $(function() {
-            // ------------------------------------------------------- //
-            // Multi Level dropdowns
-            // ------------------------------------------------------ //
-            $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                $(this).siblings().toggleClass("show");
-
-
-                if (!$(this).next().hasClass('show')) {
-                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-                }
-                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-                    $('.dropdown-submenu .show').removeClass("show");
+                    });
                 });
+            </script>
 
-            });
-        });
-    </script>
-
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
-
-
-
-
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </div>
+    </div>
 </body>
 
 

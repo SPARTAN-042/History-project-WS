@@ -27,8 +27,8 @@ body {
 }
 
 .toighter {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 #clockbox {
@@ -92,9 +92,19 @@ body {
     display: inline;
 }
 
+.glossary-text {
+    font-size: 16px;
+    line-height: 20px;
+    width: 25%;
+    padding: 0 1% 0 1%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    transition: all .7s;
+    display: inline;
+}
+
 .img-fluid {
-    border: 5px solid black;
-    border-radius: 5px;
+    border: 3px solid black;
     padding: 5px;
 }
 
@@ -392,6 +402,11 @@ th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.laws-head {
+    text-align: center;
+    margin-top: 60px;
 }
 
 
