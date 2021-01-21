@@ -346,7 +346,7 @@ content {
 
 /*___Main Body____________________________________________________________________________________________________________________*/
 
-.topic-head {
+.topic-head-b {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-size: 42px;
@@ -356,6 +356,18 @@ content {
     padding: 10px 0 10px 0;
     text-align: center;
     text-decoration: underline;
+}
+
+.topic-head-s {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: unset;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    text-decoration: unset;
 }
 
 .divider {

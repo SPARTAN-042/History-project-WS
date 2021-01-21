@@ -12,6 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/path/to/jquery.min.js"></script>
+    <script src="/path/to/jquery.cookie.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://discord.com/api/guilds/745719286869524600/widget.json"></script>
     <title>Histoire</title>
@@ -20,6 +22,7 @@
             background-color: crimson;
             color: white;
             font-weight: 500;
+            opacity: 0.8;
         }
     </style>
 
@@ -178,8 +181,11 @@
                 <div class="col-4">
                     <div class="glossary-text">
                         <dl>
-                            <dt>Title</dt>
-                            <dd>Description</dd>
+                            <div id="cc">
+                                <dt>Church Courts</dt>
+                                <dd>Church courts were established as quite separate from the secular courts, and any matters of canon law, which included adultery, had to be dealt with by the church courts. Bishops were responsible for organizing the church
+                                    courts in their diocese.</dd>
+                            </div>
                         </dl>
                     </div>
                 </div>

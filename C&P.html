@@ -165,7 +165,7 @@
                                 <hr class="divider">
                                 <p><span class="headline hl4">Crime and Punishment during the Anglo-Saxon period</span></p>
                             </div>
-                            <h3 class="topic-head">Law Enforcement</h3>
+                            <h3 class="topic-head-b">Law Enforcement</h3>
                             <br>
                             <p>Community for the Anglo-Saxons was important especially for the reason that they did not have an established police force, this meant that the Saxons would have to rely on the community to deal with criminals. The Saxons' strategy
                                 for law enforcement was to introduce <em><strong>'Tithings'</strong></em>, these were small groups of 10 men that were collectively responsible for each other and the capture of criminals.<em>The Church</em> also played
@@ -180,7 +180,7 @@
                 <div class="col-12">
                     <div class="collumn">
                         <div class="text">
-                            <h3 class="topic-head">How Criminals were Caught</h3>
+                            <h3 class="topic-head-b">How Criminals were Caught</h3>
                             <p>When a crime was committed a <a href="glossary.html#hac">Hue and Cry</a> was raised and a group of Tithings is sent out to capture the culprit - soon after the criminal is captured the local community jury will be formed, mainly
                                 consisting of men from the village who knew both the accuser and the accused. The accuser and the accused would give their version of events and it was up to the jury to decide who was telling the truth. If there was no
                                 clear evidence such as an eyewitness to the crime, the jury decided guilt or innocence based on their knowledge of the people concerned. If the jury felt that the accuser was more honest than the accused, they would swear
@@ -198,7 +198,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="collumn">
-                        <h3 class="topic-head">Trials by Ordeal</h3>
+                        <h3 class="topic-head-s">Trials by Ordeal</h3>
                         <div class="text">
                             <h4>There are four main types of Trial by Ordeal:</h4>
                             <table>
@@ -248,7 +248,7 @@
                     <div class="collumn">
                         <div class="text">
                             <div class="wnl-align">
-                                <h3 class="topic-head" style="margin: auto;">William's New Laws</h3>
+                                <h3 class="topic-head-b" style="margin: auto;">William's New Laws</h3>
                             </div>
                             <p style="margin-top: 30px;">
                                 Not long after William's claim to the English Throne, did he and his men start a castle building project - William utilised Saxon peasants to construct these fortresses for Norman lords. These castles represented power and authority, as well as being
@@ -276,7 +276,8 @@
                                 Fines were now used to deal with lesser crimes, although the money no longer went to the victims family, instead it went toward the King's treasury.
                             </p>
                             <p>
-                                William I set up the Church Courts to deal with moral crimes, strengthening the importance of the church, its strength also increased along with the more common use of oaths and trial by ordeal as the technique of determining guilt or innocence.
+                                William I set up the <a href="glossary.html#cc">Church Courts</a> to deal with moral crimes, strengthening the importance of the church, its strength also increased along with the more common use of oaths and trial by ordeal
+                                as the technique of determining guilt or innocence.
                             </p>
                             <p>
                                 Norman-French became the the official language of court proceedings and records were in Latin.
@@ -284,96 +285,121 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div id="clockbox"></div>
-
-                <script type="text/javascript">
-                    var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                    var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-                    function GetClock() {
-                        var d = new Date();
-                        var nday = d.getDay(),
-                            nmonth = d.getMonth(),
-                            ndate = d.getDate(),
-                            nyear = d.getFullYear();
-                        var nhour = d.getHours(),
-                            nmin = d.getMinutes(),
-                            nsec = d.getSeconds(),
-                            ap;
-
-                        if (nhour == 0) {
-                            ap = " AM";
-                            nhour = 12;
-                        } else if (nhour < 12) {
-                            ap = " AM";
-                        } else if (nhour == 12) {
-                            ap = " PM";
-                        } else if (nhour > 12) {
-                            ap = " PM";
-                            nhour -= 12;
-                        }
-
-                        if (nmin <= 9) nmin = "0" + nmin;
-                        if (nsec <= 9) nsec = "0" + nsec;
-
-                        var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
-                        document.getElementById('clockbox').innerHTML = clocktext;
-                    }
-
-                    GetClock();
-                    setInterval(GetClock, 1000);
-                </script>
-                <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
-                <script>
-                    ! function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = 'https://weatherwidget.io/js/widget.min.js';
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, 'script', 'weatherwidget-io-js');
-                </script>
-
-                <script>
-                    $(function() {
-                        // ------------------------------------------------------- //
-                        // Multi Level dropdowns
-                        // ------------------------------------------------------ //
-                        $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-                            event.preventDefault();
-                            event.stopPropagation();
-
-                            $(this).siblings().toggleClass("show");
-
-
-                            if (!$(this).next().hasClass('show')) {
-                                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-                            }
-                            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-                                $('.dropdown-submenu .show').removeClass("show");
-                            });
-
-                        });
-                    });
-                </script>
-
-                <script>
-                    // Used to toggle the menu on small screens when clicking on the menu button
-                    function myFunction() {
-                        var x = document.getElementById("navDemo");
-                        if (x.className.indexOf("w3-show") == -1) {
-                            x.className += " w3-show";
-                        } else {
-                            x.className = x.className.replace(" w3-show", "");
-                        }
-                    }
-                </script>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="collumn">
+                        <div class="text">
+                            <h3 class="topic-head-b">How new was Henry II's system of law?</h3>
+                            <h4 class="topic-head-s">-Law enforcement after 1154- <br> Constitution of Clarendon</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="collumn">
+                        <div class="text">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="clockbox"></div>
+
+            <script type="text/javascript">
+                var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                function GetClock() {
+                    var d = new Date();
+                    var nday = d.getDay(),
+                        nmonth = d.getMonth(),
+                        ndate = d.getDate(),
+                        nyear = d.getFullYear();
+                    var nhour = d.getHours(),
+                        nmin = d.getMinutes(),
+                        nsec = d.getSeconds(),
+                        ap;
+
+                    if (nhour == 0) {
+                        ap = " AM";
+                        nhour = 12;
+                    } else if (nhour < 12) {
+                        ap = " AM";
+                    } else if (nhour == 12) {
+                        ap = " PM";
+                    } else if (nhour > 12) {
+                        ap = " PM";
+                        nhour -= 12;
+                    }
+
+                    if (nmin <= 9) nmin = "0" + nmin;
+                    if (nsec <= 9) nsec = "0" + nsec;
+
+                    var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                    document.getElementById('clockbox').innerHTML = clocktext;
+                }
+
+                GetClock();
+                setInterval(GetClock, 1000);
+            </script>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/52d33n0d18/huntingdon/" data-label_1="HUNTINGDON" data-label_2="WEATHER" data-theme="original">HUNTINGDON WEATHER</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'weatherwidget-io-js');
+            </script>
+
+            <script>
+                $(function() {
+                    // ------------------------------------------------------- //
+                    // Multi Level dropdowns
+                    // ------------------------------------------------------ //
+                    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        $(this).siblings().toggleClass("show");
+
+
+                        if (!$(this).next().hasClass('show')) {
+                            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                        }
+                        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                            $('.dropdown-submenu .show').removeClass("show");
+                        });
+
+                    });
+                });
+            </script>
+
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+
+            <script>
+            </script>
         </div>
+    </div>
 
 
 </body>
