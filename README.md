@@ -1,3 +1,3 @@
-# History-project-WS
+\\\OUT OF COMMISSION\\\
 
-I created this project as a way to both display my knowledge on GCSE History and to be a strategy of revision for myself and others, when this repository gets deployed.
+//NEW VERSION OF PROJECT TO BE CONTINUED//
